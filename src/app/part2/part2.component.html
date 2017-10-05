@@ -1,0 +1,32 @@
+<p>
+  part2 works!
+</p>
+<div #circle id="circle" [ngStyle]='myStyles'>33</div>
+<button (click)='getMovies()'>Get Movies</button>
+<ul>
+  <li *ngFor='let item of movies'>{{item.title}}</li>
+</ul>
+
+
+<ul>
+  <li>processing mouse events
+  </li>
+</ul>
+
+
+
+
+<div [style.color]="'orange'">style using property syntax</div>
+
+<br /><br />
+
+<input [(ngModel)]="color" />
+<button (click)="size = size + 1">+</button>
+<button (click)="size = size - 1">-</button>
+
+<div [ngStyle]="{'color': color, 'font-size': size + 'px'}">
+  style using ngStyle {{size}}
+</div>
+
+<div [style.color]="randomcolor"> I would be styled with different colors dynamically </div>
+<button (click)='setColor()'>Random color</button>
